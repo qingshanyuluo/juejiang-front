@@ -1,28 +1,15 @@
 <template>
   <div id="app">
-    
-   <!-- <van-tabbar > 
-      <van-tabbar-item icon="home-o" to="/">标签</van-tabbar-item>
-      <van-tabbar-item icon="home-o" to="/explorer">标签</van-tabbar-item>
-      <van-tabbar-item icon="search" to="/">标签</van-tabbar-item>
-      <van-tabbar-item icon="friends-o" to="/fuGuanzhu">标签</van-tabbar-item>
-      <van-tabbar-item icon="setting-o" info="20">标签</van-tabbar-item>
-    </van-tabbar> --> 
-<!-- 	<menu-tabbar></menu-tabbar> -->
-<router-view></router-view>
+    <transition name="fade">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
 <script>
-// import menuTabbar from "./components/menuTabbar.vue"; 
-// import Vue from 'vue';
-// import { Tabbar, TabbarItem } from 'vant';
-// Vue.use(Tabbar).use(TabbarItem);
 export default {
   components: {
-
   },
-  
 }
 </script>
 
@@ -48,4 +35,14 @@ export default {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+
+  .fade-enter, .fade-leave-to {
+    opacity: 0
+  }
+  .fade-leave, .fade-enter-to {
+    opacity: 1
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition: all .4s
+  }
 </style>

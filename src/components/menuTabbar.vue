@@ -16,14 +16,14 @@ export default {
       tabbars: [
         {
           name: "/",
-          title: "发现",
+          title: "首页",
           normal:
             "http://sucai.suoluomei.cn/sucai_zs/images/20190910093117-fx2.png",
           active:
             "http://sucai.suoluomei.cn/sucai_zs/images/20190910093117-fx.png"
         },
         {
-          name: "/Explorer",
+          name: "/explorer",
           title: "发现",
           normal:
             "http://sucai.suoluomei.cn/sucai_zs/images/20190910093117-xx.png",
@@ -38,26 +38,26 @@ export default {
           active:
             "http://sucai.suoluomei.cn/sucai_zs/images/20190910093117-wd2.png"
         },
-		{
-		  name: "/shop",
-		  title: "产品库",
-		  normal:
-		    "http://sucai.suoluomei.cn/sucai_zs/images/20190910093117-wd.png",
-		  active:
-		    "http://sucai.suoluomei.cn/sucai_zs/images/20190910093117-wd2.png"
-		},
-		{
-		  name: "/myInfo",
-		  title: "我的",
-		  normal:
-		    "http://sucai.suoluomei.cn/sucai_zs/images/20190910093117-wd.png",
-		  active:
-		    "http://sucai.suoluomei.cn/sucai_zs/images/20190910093117-wd2.png"
-		}
+        {
+          name: "/shop",
+          title: "产品库",
+          normal:
+            "http://sucai.suoluomei.cn/sucai_zs/images/20190910093117-wd.png",
+          active:
+            "http://sucai.suoluomei.cn/sucai_zs/images/20190910093117-wd2.png"
+        },
+        {
+          name: "/personal",
+          title: "我的",
+          normal:
+            "http://sucai.suoluomei.cn/sucai_zs/images/20190910093117-wd.png",
+          active:
+            "http://sucai.suoluomei.cn/sucai_zs/images/20190910093117-wd2.png"
+        }
       ]
     };
   },
-  methods: {},  
+  methods: {},
   //通过路由跳转判断选中的样式
   created() {
     if (this.$route.name == "index") {

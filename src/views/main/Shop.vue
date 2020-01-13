@@ -32,15 +32,11 @@
       </van-grid>
 	  <br><br>
     </div>
-	<menu-tabbar></menu-tabbar>
   </div>
 </template>
 
 <script>
-	import menuTabbar from "./menuTabbar.vue"
 export default {
-	name:"shop",
-	components:{menuTabbar},
   data() {
     return {
       typeList: [
@@ -265,7 +261,7 @@ export default {
 </script>
 
 <style scoped>
-@import "../assets/css/remove-scrollBar.css";
+@import "../../assets/css/remove-scrollBar.css";
 
 /* 商品列表 */
 .van-grid-item >>> .van-grid-item__icon {
@@ -342,7 +338,7 @@ header {
   justify-content: space-between;
   align-items: stretch;
   padding: 30px 10px 70px 10px;
-  background-image: url("../assets/img/goodsbg.png");
+  background-image: url("../../assets/img/goodsbg.png");
 }
 p {
   margin: 0;
