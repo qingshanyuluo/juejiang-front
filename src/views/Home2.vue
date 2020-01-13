@@ -1,7 +1,7 @@
 <template>
- <div><div >
+ <div id="Home2"><div >
   <van-row justify="center" type="flex">
-      <van-col span="0.5" ><router-link to="/Home2"><van-icon class="btn"  name="star-o" size="20" /></router-link></van-col>
+      <van-col span="0.5" ><router-link to="/Home"><van-icon class="btn"  name="star-o" size="20" /></router-link></van-col>
     <van-col span="23"  > <router-link to="/search"><van-search   input-align="center" shape="round" placeholder="请输入搜索关键词" v-model="value" /></router-link></van-col>
     <van-col span="0.5"><van-icon style="right:5px;" class="btn" name="star-o" size="20" /></van-col>
     </van-row>
@@ -26,8 +26,8 @@
 		  <van-tabs v-model="active">
 		    <van-tab title="推荐"><article-guanzhu></article-guanzhu></van-tab>
 		    <van-tab title="关注"><article-guanzhu></article-guanzhu></van-tab>
-		    <van-tab title="圣诞限定"><article-guanzhu></article-guanzhu></van-tab>
-		    <van-tab title="百元护肤"><article-guanzhu></article-guanzhu></van-tab>
+		    <van-tab title="流行妆容"><article-guanzhu></article-guanzhu></van-tab>
+		    <van-tab title="百元彩妆"><article-guanzhu></article-guanzhu></van-tab>
 		  </van-tabs>
 		
 	</div>
@@ -56,7 +56,7 @@ import { Swipe, SwipeItem } from 'vant';
 Vue.use(Swipe).use(SwipeItem);
 
 export default {
-
+name:"Home2",
 
   data() { return{
 	  
@@ -86,7 +86,7 @@ export default {
 </script>
 <style scoped>
 	.btn{
-		color:#60B2CD;
+		color:darksalmon;
 		top:15px;
 		margin-left: 4px;
 	}

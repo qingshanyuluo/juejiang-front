@@ -1,24 +1,27 @@
 <template>
   <div id="app">
-    <router-view />
-    <van-tabbar route> 
+    
+   <!-- <van-tabbar > 
       <van-tabbar-item icon="home-o" to="/">标签</van-tabbar-item>
       <van-tabbar-item icon="home-o" to="/explorer">标签</van-tabbar-item>
-      <van-tabbar-item icon="search" dot>标签</van-tabbar-item>
-      <van-tabbar-item icon="friends-o" info="5">标签</van-tabbar-item>
+      <van-tabbar-item icon="search" to="/">标签</van-tabbar-item>
+      <van-tabbar-item icon="friends-o" to="/fuGuanzhu">标签</van-tabbar-item>
       <van-tabbar-item icon="setting-o" info="20">标签</van-tabbar-item>
-    </van-tabbar>
+    </van-tabbar> --> 
+<!-- 	<menu-tabbar></menu-tabbar> -->
+<router-view></router-view>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { Tabbar, TabbarItem } from 'vant';
-Vue.use(Tabbar).use(TabbarItem);
+// import menuTabbar from "./components/menuTabbar.vue"; 
+// import Vue from 'vue';
+// import { Tabbar, TabbarItem } from 'vant';
+// Vue.use(Tabbar).use(TabbarItem);
 export default {
   components: {
 
-  }
+  },
   
 }
 </script>
