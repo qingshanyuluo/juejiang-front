@@ -1,23 +1,23 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import articleGuanzhu from "../components/articlefu/articleGuanzhu.vue";
-import articleMessage from "../views/articleMessage.vue";
-import now from "../views/search.vue";
-import myorder from "../views/myorder.vue";
 import myinfoEdit from "../components/myinfo/myinfoEdit.vue";
-import search from "../views/search.vue";
-import ExplorerQiandao from "./../components/Explorer/ExplorerQiandao.vue";
-import Add from "./../components/add.vue";
-import Goods from "./../components/Goods.vue";
-import addGoods from "./../components/addGoods.vue";
-import goodsInfo from "./../components/goodsInfo.vue";
+import Goods from "../components/Goods.vue";
+import addGoods from "../components/addGoods.vue";
+import goodsInfo from "../components/goodsInfo.vue";
 import goodsComment from "./../components/goodComment.vue";
-import report from "./../components/report.vue";
-import Main from "./../views/main/Main.vue"
-import Home from "./../views/main/Home.vue"
-import Explorer from "./../views/main/Explorer.vue"
-import Shop from "./../views/main/Shop.vue"
-import Personal from "./../views/main/Personal.vue"
+
+import SignIn from "../views/SignIn.vue";
+import myorder from "../views/myorder.vue";
+import report from "../components/report.vue";
+import Main from "../views/main/Main.vue"
+import Home from "../views/main/Home.vue"
+import Explorer from "../views/main/Explorer.vue"
+import Shop from "../views/main/Shop.vue"
+import Personal from "../views/main/Personal.vue"
+import search from "../views/search.vue";
+import Add from "../views/Add.vue";
+import Article from "../views/Article.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -60,14 +60,9 @@ const routes = [
     component: search
   },
   {
-    path: "/articleMessage",
-    name: "articlemessage",
-    component: articleMessage
-  },
-  {
-    path: "/now",
-    name: "now",
-    component: now
+    path: "/article",
+    name: "Article",
+    component: Article
   },
   {
     path: "/myorder",
@@ -103,8 +98,8 @@ const routes = [
     component: Goods,
   },
   {
-    path: "/ExplorerQiandao",
-    component: ExplorerQiandao,
+    path: "/sign-in",
+    component: SignIn,
   },
   {
     path: "/",

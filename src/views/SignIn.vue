@@ -10,15 +10,15 @@
     <!-- 头部 -->
     <header>
       <div class="avator">
-        <img src="./../../assets/img/tx.png" alt="">
+        <img src="../assets/img/tx.png" alt="">
       </div>
       <div class="user-wrap">
         <div class="user-name">
           <div>我的购物基金</div>
-          <img src="./../../assets/img/wh.png" alt="">
+          <img src="../assets/img/wh.png" alt="">
         </div>
         <div class="user-counts">
-            <img src="./../../assets/img/jb.png" alt="">
+            <img src="../assets/img/jb.png" alt="">
           <div>{{allIntegral}}</div>
         </div>
       </div>
@@ -334,7 +334,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-image: url(../../assets/img/qdbg.png);
+    background-image: url(../assets/img/qdbg.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }

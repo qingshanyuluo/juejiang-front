@@ -9,7 +9,7 @@
       </van-col>
       <van-col span="6"></van-col>
       <van-col span="4">
-        <router-link to="/ExplorerQiandao">
+        <router-link to="/sign-in">
           <van-icon style=" margin-right:0px;" size="30" name="sign" />
         </router-link>
       </van-col>

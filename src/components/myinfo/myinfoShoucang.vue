@@ -1,7 +1,7 @@
 <template>
 	<div id="myinfoShoucang">
 	<div style="float: left; margin-left: 1px;" v-for="item of img" v-bind:key="item">
-		<router-link to="/articleMessage"><van-image
+		<router-link to="/article"><van-image
 		  width="118.5"
 		  height="100"
 		  :src=item

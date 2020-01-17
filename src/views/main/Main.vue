@@ -1,6 +1,6 @@
 <template>
   <div>
-    <transition name="fade">
+    <transition name="van-fade">
       <router-view/>
     </transition>
     <MenuTabbar/>

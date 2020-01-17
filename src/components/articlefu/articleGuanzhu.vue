@@ -3,7 +3,7 @@
   <span   v-for="(arti,i) in sites" v-bind:key="i">
     <van-row>
       <van-col span="0.5"></van-col>
-    <van-col span="23"> <router-link to="/articleMessage"> <van-image style=" border-radius: 10px 10px 10px 10px; left:3.3px  " width="353" height="180" :src="arti.iurl" /></router-link><br /> 
+    <van-col span="23"> <router-link to="/article"> <van-image style=" border-radius: 10px 10px 10px 10px; left:3.3px  " width="353" height="180" :src="arti.iurl" /></router-link><br /> 
 		<h2   style=" font-weight:normal; margin-left:9px ;text-align: left;margin-top: 5px;">{{ arti.ititle }}</h2>
       <h5 style=" font-weight:normal; color: darkgrey; margin-left:9px ;text-align: left;margin-top: -17px;">{{ arti.itext }}</h5>
 	  </van-col>
@@ -47,16 +47,27 @@ import { Image } from "vant";
 Vue.use(Image);
 export default { 
   name: "articleGuanzhu",
-  props: {
-						
-						},
+  props: {},
   data() {
     return {
-	sites:[
-			{ititle:'标题标题标题标题标题标发撒分厘卡撒酒疯拉萨解放沙拉题',itext:'内弗萨卡拉封杀了封杀了飞洒容内容',iurl:require('../../image/homeimage/11.png'),
-			writerimage:require('../../image/homeimage/3.png'),writername:'作者名',zanmount:1,talkmount:3},
-						{ititle:'标题标题',itext:'内容内容',iurl:require('../../image/homeimage/2.png'),
-			writerimage:require('../../image/homeimage/2.png'),writername:'作者名',zanmount:1,talkmount:3}
+	    sites:[
+        {
+          ititle: '标题标题标题标题标题标发撒分厘卡撒酒疯拉萨解放沙拉题',
+          itext: '内弗萨卡拉封杀了封杀了飞洒容内容',
+          iurl: require('../../image/homeimage/11.png'),
+          writerimage: require('../../image/homeimage/3.png'),
+          writername: '作者名',
+          zanmount: 1,
+          talkmount: 3
+        }, {
+          ititle: '标题标题',
+          itext: '内容内容',
+          iurl: require('../../image/homeimage/2.png'),
+          writerimage:require('../../image/homeimage/2.png'),
+          writername:'作者名',
+          zanmount:1,
+          talkmount:3
+        }
 			]
 	};
   }
