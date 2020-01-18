@@ -1,5 +1,7 @@
 <template>
   <div>
+    <test dd="fsfsd"/>
+
     <van-row justify="center" type="flex">
       <van-col span="1">
         <div class="change" @click="change()">
@@ -39,29 +41,30 @@
     </van-row>
     <van-tabs class="tabs">
       <van-tab title="推荐">
-        <article-guanzhu></article-guanzhu>
+        <Abstracts :type="0"/>
       </van-tab>
       <van-tab title="关注">
-        <article-guanzhu></article-guanzhu>
+        <Abstracts :type="1"/>
       </van-tab>
       <van-tab title="高端合集" v-if="fu">
-        <article-guanzhu></article-guanzhu>
+        <Abstracts :type="2"/>
       </van-tab>
       <van-tab title="百元护肤" v-if="fu">
-        <article-guanzhu></article-guanzhu>
+        <Abstracts :type="3"/>
       </van-tab>
       <van-tab title="眼妆合集" v-if="!fu">
-        <article-guanzhu></article-guanzhu>
+        <Abstracts :type="4"/>
       </van-tab>
       <van-tab title="美妆功课" v-if="!fu">
-        <article-guanzhu></article-guanzhu>
+        <Abstracts :type="5"/>
       </van-tab>
     </van-tabs>
   </div>
 </template>
 
 <script>
-import articleGuanzhu from "../../components/articlefu/articleGuanzhu.vue";
+// import articleGuanzhu from "../../components/articlefu/articleGuanzhu.vue";
+import Abstracts from "../../components/abstract/Abstracts1";
 import Vue from "vue";
 import { Divider, Row, Col, Search, Tab, Tabs, Icon, Tabbar, TabbarItem, Button, Swipe, SwipeItem } from 'vant';
 Vue.use(Divider).use(Row).use(Col).use(Search).use(Tab).use(Tabs).use(Icon).use(Tabbar).use(TabbarItem).use(Button).use(Swipe).use(SwipeItem);
@@ -79,7 +82,7 @@ export default {
       /*文章外部信息*/
     };
   },
-  components: { articleGuanzhu },
+  components: { Abstracts },
   methods: {
     change(){
       this.fu=!this.fu
