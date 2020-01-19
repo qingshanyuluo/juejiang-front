@@ -49,12 +49,13 @@
       <span style="font-size:small; letter-spacing:1px; color:darkgrey;">/&nbsp;探索更有趣的生活</span>
       <span style="font-size: xxx-large; color:darkgrey;">”</span>
     </div>
-
+    <Abstract/>
   </div>
 </template>
 
 <script>
 import Vue from "vue";
+import Abstract from "../../components/abstract/Abstracts2";
 import { Icon } from "vant";
 Vue.use(Icon);
 import { Row, Col } from "vant";
@@ -63,6 +64,7 @@ import { Search } from "vant";
 Vue.use(Search);
 export default {
   name: "Explorer",
+  components: { Abstract },
   data() {
     return {
       active: 2,
