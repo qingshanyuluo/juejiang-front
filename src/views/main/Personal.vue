@@ -12,7 +12,7 @@
 		<van-row type="flex">
 			<van-col span="1"></van-col>
 			<van-col span="3">
-				<router-link to="/myinfoEdit">
+				<router-link to="/info">
 				<van-image
 				  round
 				  width="5rem"

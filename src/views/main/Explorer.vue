@@ -1,11 +1,9 @@
 <template>
   <div id="Explorer">
-    <br />
-    <menu-tabbar></menu-tabbar>
-    <van-row type="flex">
-      <van-col span="11"></van-col>
-      <van-col span="3">
-        <span style="font-size: larger;   margin-left: -11px; ">发现</span>
+    <van-row type="flex" style="margin-top: 15px">
+      <van-col span="10"></van-col>
+      <van-col span="4">
+        <span style="font-size: larger;">发现</span>
       </van-col>
       <van-col span="6"></van-col>
       <van-col span="4">
@@ -25,7 +23,7 @@
           width="220"
         >
           <van-swipe-item v-for="(image, index) in images" :key="index">
-            <van-image width="310" height="130" :src="image" />
+            <van-image width="310" height="150" :src="image" />
           </van-swipe-item>
         </van-swipe>
       </van-col>
@@ -33,9 +31,9 @@
     </van-row>
     <van-image
       width="325"
-      height="100"
+      height="95"
       radius="8px"
-      style="margin-top: 2px;"
+      style="margin-top: 8px;"
       src="https://img.yzcdn.cn/vant/cat.jpeg"
     />
     <van-image
@@ -46,26 +44,17 @@
       src="https://img.yzcdn.cn/vant/cat.jpeg"
     />
     <br />
-    <div style="text-align: left; margin-left: 20px;">
-      <span style="font-size: large; letter-spacing:1px;  font-weight: 600;">今天聊什么&nbsp;</span>
+    <div style="text-align: left; padding: 15px">
+      <span style="font-size: x-large; letter-spacing:1px;  font-weight: 600;">今天聊什么&nbsp;</span>
       <span style="font-size:small; letter-spacing:1px; color:darkgrey;">/&nbsp;探索更有趣的生活</span>
-      <span style="font-size:xx-large; color:darkgrey;">”</span>
+      <span style="font-size: xxx-large; color:darkgrey;">”</span>
     </div>
 
-    <van-tabs v-model="active">
-      <van-tab title="标签 1">内容 1</van-tab>
-      <van-tab title></van-tab>
-      <van-tab title="标签 3">内容 3</van-tab>
-      <van-tab title="标签 4">内容 4</van-tab>
-    </van-tabs>
   </div>
 </template>
 
 <script>
 import Vue from "vue";
-import { Tab, Tabs } from "vant";
-import menuTabbar from "../../components/menuTabbar.vue";
-Vue.use(Tab).use(Tabs);
 import { Icon } from "vant";
 Vue.use(Icon);
 import { Row, Col } from "vant";
@@ -74,7 +63,6 @@ import { Search } from "vant";
 Vue.use(Search);
 export default {
   name: "Explorer",
-  components: { menuTabbar },
   data() {
     return {
       active: 2,

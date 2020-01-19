@@ -1,7 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import articleGuanzhu from "../components/articlefu/articleGuanzhu.vue";
-import myinfoEdit from "../components/myinfo/myinfoEdit.vue";
 import Goods from "../components/Goods.vue";
 import addGoods from "../components/addGoods.vue";
 import goodsInfo from "../components/goodsInfo.vue";
@@ -18,6 +16,7 @@ import Personal from "../views/main/Personal.vue"
 import search from "../views/search.vue";
 import Add from "../views/Add.vue";
 import Article from "../views/Article.vue";
+import Info from "../views/Info.vue"
 Vue.use(VueRouter);
 
 const routes = [
@@ -50,11 +49,6 @@ const routes = [
   },
 
   {
-    path: "/fuGuanzhu",
-    name: "fuguanzhu",
-    component: articleGuanzhu
-  },
-  {
     path: "/search",
     name: "search",
     component: search
@@ -70,10 +64,6 @@ const routes = [
     component: myorder
   },
   {
-    path: "/myinfoEdit",
-    name: "myinfoEdit",
-    component: myinfoEdit
-  }, {
     path: "/report",
     component: report
   },
@@ -102,9 +92,9 @@ const routes = [
     component: SignIn,
   },
   {
-    path: "/",
-    redirect: "/Home"
-  },
+    path: "/info",
+    component: Info
+  }
 
 ];
 
