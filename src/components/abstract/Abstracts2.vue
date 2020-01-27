@@ -9,14 +9,23 @@
         <div :class="{ active: active === 3 }" class="tab" @click="change(3)">美妆</div>
       </van-col>
     </van-row>
+    <page :index="active" />
   </div>
 </template>
 
 <script>
+import Page from './ExplorePage'
 export default {
+  components: { Page },
   data(){
     return {
-      active: 0
+      active: 0,
+      content: [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
     }
   },
   methods: {
