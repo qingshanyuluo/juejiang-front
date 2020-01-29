@@ -12,7 +12,9 @@
         </router-link>
       </van-col>
     </van-row>
-    <van-search input-align="center" shape="round" placeholder="请输入搜索关键词" v-model="value" />
+    <router-link to="/search">
+      <van-search input-align="center" shape="round" placeholder="请输入搜索关键词" v-model="value" />
+    </router-link>
 
     <van-row type="flex">
       <van-col span="0.5"></van-col>
