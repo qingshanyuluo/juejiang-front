@@ -16,6 +16,7 @@ import Add from "../views/Add.vue";
 import Article from "../views/Article.vue";
 import Info from "../views/Info.vue"
 import Goods from "../views/Goods.vue"
+import Tag from "../views/infos/Tag.vue"
 Vue.use(VueRouter);
 
 const routes = [
@@ -89,6 +90,10 @@ const routes = [
   {
     path: "/info",
     component: Info
+  },
+  {
+    path: "/tag",
+    component: Tag
   }
 
 ];

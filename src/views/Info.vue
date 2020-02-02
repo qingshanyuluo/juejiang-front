@@ -2,7 +2,6 @@
   <div id="info">
     <van-nav-bar title="个人信息" left-arrow @click-left="onClickLeft" />
     <van-cell value="修改" is-link style="padding: 15px">
-      <!-- 使用 title 插槽来自定义标题 -->
       <div slot="title" style="padding = 20px">
         <van-col span="9"></van-col>
         <van-col span="4">
@@ -21,8 +20,10 @@
       </div>
     </van-cell>
     <div style="margin-left: -70px;">
+      <router-link to="/tag">
+        <van-cell title="标签" is-link value="90后"/>
+      </router-link>
       <van-cell title="手机号" is-link value="3213134142" />
-      <van-cell title="标签" is-link value="90后" />
       <van-cell title="肤质" is-link value="干" />
       <van-cell title="收货地址" is-link value="点击查看" />
     </div>
@@ -33,11 +34,11 @@
 import Vue from "vue";
 import { NavBar } from "vant";
 import { Toast } from "vant";
+import { Cell, CellGroup } from "vant";
+import { Image } from "vant";
+Vue.use(Cell).use(CellGroup);
 Vue.use(Toast);
 Vue.use(NavBar);
-import { Cell, CellGroup } from "vant";
-Vue.use(Cell).use(CellGroup);
-import { Image } from "vant";
 Vue.use(Image);
 export default {
   data() {
@@ -48,10 +49,14 @@ export default {
   methods: {
     onClickLeft() {
       history.go(-1);
-    }
+    },
   }
 };
 </script>
 
 <style>
+
+#info{
+  margin: 10px;
+}
 </style>
