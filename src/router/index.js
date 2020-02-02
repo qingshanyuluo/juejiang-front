@@ -1,7 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Goods from "../components/Goods.vue";
-import addGoods from "../components/addGoods.vue";
 import goodsInfo from "../components/goodsInfo.vue";
 import goodsComment from "./../components/goodComment.vue";
 
@@ -17,6 +15,7 @@ import search from "../views/search.vue";
 import Add from "../views/Add.vue";
 import Article from "../views/Article.vue";
 import Info from "../views/Info.vue"
+import Goods from "../views/Goods.vue"
 Vue.use(VueRouter);
 
 const routes = [
@@ -76,16 +75,12 @@ const routes = [
     component: goodsInfo,
   },
   {
-    path: "/addGoods",
-    component: addGoods,
+    path: "/goods",
+    component: Goods,
   },
   {
     path: "/add",
     component: Add,
-  },
-  {
-    path: "/Goods",
-    component: Goods,
   },
   {
     path: "/sign-in",

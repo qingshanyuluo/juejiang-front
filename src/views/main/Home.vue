@@ -32,7 +32,7 @@
           width="400"
           height="200"
         >
-          <van-swipe-item v-for="(image, index) in images" :key="index">
+          <van-swipe-item v-for="(image, index) in image(fu)" :key="index">
             <img :src="image" @click="Preview_img(images, index)" />
           </van-swipe-item>
         </van-swipe>
@@ -73,10 +73,16 @@ export default {
   data() {
     return {
       fu: true,
-      images: [
+      images1: [
         require("../../image/homeimage/2.png"),
         require("../../image/homeimage/3.png"),
         require("../../image/homeimage/4.png"),
+        require("../../image/homeimage/11.png")
+      ],
+      images2: [
+        require("../../image/homeimage/11.png"),
+        require("../../image/homeimage/11.png"),
+        require("../../image/homeimage/11.png"),
         require("../../image/homeimage/11.png")
       ]
       /*文章外部信息*/
@@ -86,6 +92,13 @@ export default {
   methods: {
     change(){
       this.fu=!this.fu
+    },
+    image(fu){
+      if (fu) {
+        return this.images1;
+      } else {
+        return this.images2
+      }
     },
     // 轮播图预览
     Preview_img(images, index) {

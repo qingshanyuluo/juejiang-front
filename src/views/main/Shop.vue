@@ -23,7 +23,7 @@
       </p>
       <van-grid :border="false">
         <van-grid-item
-          :to="{path:'/goodsComment'}"
+          :to="{path:'/goods'}"
           :icon="items.icons"
           :text="items.name"
           v-for="(items,index) in showList"

@@ -72,7 +72,7 @@ export default {
     },   
     methods: {
         goGoodsInfo(){
-            this.$router.push({path: '/goodsInfo'})
+            this.$router.push({path: '/goodsComment'})
         }
     }
 }
