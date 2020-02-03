@@ -2,7 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import goodsInfo from "../components/goodsInfo.vue";
 import goodsComment from "./../components/goodComment.vue";
-
+import now1 from "../components/faceanalyse/featureAnalyse.vue";
+import now2 from "../views/faceAnalyse.vue";
 import SignIn from "../views/SignIn.vue";
 import myorder from "../views/myorder.vue";
 import report from "../components/report.vue";
@@ -66,6 +67,16 @@ const routes = [
   {
     path: "/report",
     component: report
+  },
+  {
+  	  path:"/now1",
+  	  name:"now1",
+  	  component:now1
+  },
+  {
+  	  path:"/now2",
+  	  name:"now2",
+  	  component:now2
   },
   {
     path: "/goodsComment",
