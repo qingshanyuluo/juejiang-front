@@ -35,10 +35,12 @@
             <div></div>
             <span>写心得</span>
           </div>
-          <div class="diy-items" @click="markSkin">
-            <div></div>
-            <span>测肤</span>
-          </div>
+          <van-uploader :after-read="afterRead">
+            <div class="diy-items">
+                <div></div>
+                <span>测肤</span>
+            </div>
+          </van-uploader>
           <div class="diy-items" @click="goAddGoods">
             <div></div>
             <span>添加开封</span>
@@ -130,6 +132,10 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import { Uploader } from 'vant';
+
+Vue.use(Uploader);
 export default {
   data() {
     return {
@@ -158,14 +164,27 @@ export default {
     goAddGoods() {
       this.$router.push({ path: "/Goods" });
     },
-    markSkin() {
-        this.$router.push({ path: "/markSkin"})
-    }
     back() {
       this.$router.go(-1);
     },
     goReport() {
       this.$router.push({ path: "/report" });
+    },
+    afterRead(file) {
+      var settings = {
+        "url": "https://api.yimei.ai/v2/api/face/analysis/1",
+        "method": "POST",
+        "tixmeout": 0,
+        "headers": {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Authorization": "Basic MDYyNjI4ZWNlOWU1ZmNmYjpiMjRjN2YyMmNlZjQyZTUxZjIyZmZlZmI0ZWZjZjY4Yg=="
+        },
+        "data": {
+            "image": file
+        }
+      };
+      
+      console.log(file);
     }
   }
 };
