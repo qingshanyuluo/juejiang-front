@@ -134,7 +134,10 @@
 <script>
 import Vue from 'vue';
 import { Uploader } from 'vant';
-
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+ 
+Vue.use(VueAxios, axios)
 Vue.use(Uploader);
 export default {
   data() {
@@ -176,15 +179,19 @@ export default {
         "method": "POST",
         "tixmeout": 0,
         "headers": {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Authorization": "Basic MDYyNjI4ZWNlOWU1ZmNmYjpiMjRjN2YyMmNlZjQyZTUxZjIyZmZlZmI0ZWZjZjY4Yg=="
+            "Authorization": "Basic MDYyNjI4ZWNlOWU1ZmNmYjpiMjRjN2YyMmNlZjQyZTUxZjIyZmZlZmI0ZWZjZjY4Yg"
         },
         "data": {
             "image": file
         }
-      };
-      
-      console.log(file);
+      }
+      Vue.axios(settings)
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     }
   }
 };

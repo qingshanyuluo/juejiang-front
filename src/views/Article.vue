@@ -227,8 +227,6 @@ export default {
     font-size: 14px;
     border-bottom: 1px solid #eee;
 }
-.comment-wrap{
-}
 .age-wrap div p >>> .van-progress{
     flex: 1;
     margin: 0 4px;
