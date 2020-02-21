@@ -16,7 +16,6 @@
 					
 				</van-col>
 			</van-row> 
-	
 			 
 			 <br><br><br><br><br><br><br><br><br><br><br><br></div>
 			 			<van-divider style="margin-top: 0px;" />

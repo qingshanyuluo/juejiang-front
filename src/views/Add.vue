@@ -174,16 +174,13 @@ export default {
       this.$router.push({ path: "/report" });
     },
     afterRead(file) {
+      var formdata = new FormData();
+      formdata.append("image", file);
       var settings = {
-        "url": "https://api.yimei.ai/v2/api/face/analysis/1",
+        "url": "http://localhost:8080/cefu",
         "method": "POST",
         "tixmeout": 0,
-        "headers": {
-            "Authorization": "Basic MDYyNjI4ZWNlOWU1ZmNmYjpiMjRjN2YyMmNlZjQyZTUxZjIyZmZlZmI0ZWZjZjY4Yg"
-        },
-        "data": {
-            "image": file
-        }
+        "data": formdata
       }
       Vue.axios(settings)
         .then(function (response) {
