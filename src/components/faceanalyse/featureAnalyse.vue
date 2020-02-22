@@ -118,12 +118,17 @@ Vue.use(Tabs);
 				backgroundMan: {
 				backgroundImage:'url(' + require('@/assets/img/man.png') + ')',
 				backgroundRepeat:'no-repeat'
-
-				    },
+		    },
 			intro:["高鼻梁","黄头发","蓝眼睛","戴眼镜","没戴眼镜","高鼻梁","黄头发","蓝眼睛","戴眼镜","没戴眼镜","高鼻梁"],
 			eyes:require("@/assets/img/eyes.png"),
 			nose:require("@/assets/img/nose.png"),
 			mouth:require("@/assets/img/mouth.png")
+			}
+		},
+		computed:{
+			age: function() {
+			// 通过vuex的getters方法来获取state里面的数据
+				return this.$store.getters.getAge;
 			}
 		}
 	}

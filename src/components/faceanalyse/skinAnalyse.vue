@@ -30,9 +30,9 @@
 					  <div style=" margin-left: 9px; text-align: left;font-size: large; font-weight: 1000; " >评分</div>
 		  	<br>
 			<van-circle style="margin-left: 0px;"
-		  	  v-model="agedata"
-		  	:rate="agedata"
-		  	  :text="agedata"
+		  	  v-model="age"
+		  	:rate="age"
+		  	  :text="age"
 		  	  size="140px"
 		  	  layer-color="#ebedf0"
 		  	  :stroke-width="60"
@@ -46,7 +46,7 @@
 		  	  :stroke-width="60"
 		  	/>
 		  	<br><br>
-		  	<span  >肌龄</span>
+		  	<span>肌龄</span>
 		  	<span style="margin-left: 173px;">总分</span>
 		  	<br><br>
 			<van-divider style="margin-top: 0px;" />
@@ -61,8 +61,6 @@
 				<van-col >
 				<div class="youmessage">中性偏油</div>	
 				</van-col>
-				
-				
 			</van-row>
 		<br>
 			  <br>
@@ -251,6 +249,12 @@
 	Vue.use(Row);
 	export default{
 		name:"skinAnalyse",
+		computed: {
+			age:function() {
+			// 通过vuex的getters方法来获取state里面的数据
+				return this.$store.getters.getAge;
+			}
+		},
 		data(){
 			return{
 				backgroundYou: {
@@ -276,11 +280,8 @@
 					heige:2,
 					heizhanbi:0.33
 				},
-					
-					
-					
-					xiding:"true",
-				agedata:13,/* 年龄 */
+
+				xiding:"true",
 				ratedata:86,/* 评分 */
 		        lianimg:require("@/assets/img/renlian.png"),/* 80分90以下顶部显示的人脸 */	
 		        lianimg1:require("@/assets/img/renlian1.png"),/* 90分以上顶部显示的人脸 */	
