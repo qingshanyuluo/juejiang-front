@@ -15,13 +15,13 @@
           />
         </van-col>
         <van-col span="4">
-          <h1>{{name}}</h1>
+          <h1>{{ name }}</h1>
         </van-col>
       </div>
     </van-cell>
     <div style="margin-left: -70px;">
       <router-link to="/tag">
-        <van-cell title="标签" is-link value="90后"/>
+        <van-cell title="标签" is-link value="90后" />
       </router-link>
       <van-cell title="手机号" is-link value="3213134142" />
       <van-cell title="肤质" is-link value="干" />
@@ -43,20 +43,19 @@ Vue.use(Image);
 export default {
   data() {
     return {
-      name: "DDgu",
+      name: "DDgu"
     };
   },
   methods: {
     onClickLeft() {
       history.go(-1);
-    },
+    }
   }
 };
 </script>
 
 <style>
-
-#info{
+#info {
   margin: 10px;
 }
 </style>

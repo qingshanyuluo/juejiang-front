@@ -13,7 +13,12 @@
       </van-col>
     </van-row>
     <router-link to="/search">
-      <van-search input-align="center" shape="round" placeholder="请输入搜索关键词" v-model="value" />
+      <van-search
+        input-align="center"
+        shape="round"
+        placeholder="请输入搜索关键词"
+        v-model="value"
+      />
     </router-link>
 
     <van-row type="flex">
@@ -47,11 +52,15 @@
     />
     <br />
     <div style="text-align: left; padding: 15px">
-      <span style="font-size: x-large; letter-spacing:1px;  font-weight: 600;">今天聊什么&nbsp;</span>
-      <span style="font-size:small; letter-spacing:1px; color:darkgrey;">/&nbsp;探索更有趣的生活</span>
+      <span style="font-size: x-large; letter-spacing:1px;  font-weight: 600;"
+        >今天聊什么&nbsp;</span
+      >
+      <span style="font-size:small; letter-spacing:1px; color:darkgrey;"
+        >/&nbsp;探索更有趣的生活</span
+      >
       <span style="font-size: xxx-large; color:darkgrey;">”</span>
     </div>
-    <Abstract/>
+    <Abstract />
   </div>
 </template>
 
@@ -81,5 +90,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <test dd="fsfsd"/>
+    <test dd="fsfsd" />
 
     <van-row justify="center" type="flex">
       <van-col span="1">
@@ -20,7 +20,12 @@
         </router-link>
       </van-col>
       <van-col span="1">
-        <van-icon style="top: 15px; right: 15px;" class="btn" name="star-o" size="20" />
+        <van-icon
+          style="top: 15px; right: 15px;"
+          class="btn"
+          name="star-o"
+          size="20"
+        />
       </van-col>
     </van-row>
     <van-row justify="center" type="flex">
@@ -41,22 +46,22 @@
     </van-row>
     <van-tabs class="tabs">
       <van-tab title="推荐">
-        <Abstracts :type="0"/>
+        <Abstracts :type="0" />
       </van-tab>
       <van-tab title="关注">
-        <Abstracts :type="1"/>
+        <Abstracts :type="1" />
       </van-tab>
       <van-tab title="高端合集" v-if="fu">
-        <Abstracts :type="2"/>
+        <Abstracts :type="2" />
       </van-tab>
       <van-tab title="百元护肤" v-if="fu">
-        <Abstracts :type="3"/>
+        <Abstracts :type="3" />
       </van-tab>
       <van-tab title="眼妆合集" v-if="!fu">
-        <Abstracts :type="4"/>
+        <Abstracts :type="4" />
       </van-tab>
       <van-tab title="美妆功课" v-if="!fu">
-        <Abstracts :type="5"/>
+        <Abstracts :type="5" />
       </van-tab>
     </van-tabs>
   </div>
@@ -66,8 +71,32 @@
 // import articleGuanzhu from "../../components/articlefu/articleGuanzhu.vue";
 import Abstracts from "../../components/abstract/Abstracts1";
 import Vue from "vue";
-import { Divider, Row, Col, Search, Tab, Tabs, Icon, Tabbar, TabbarItem, Button, Swipe, SwipeItem } from 'vant';
-Vue.use(Divider).use(Row).use(Col).use(Search).use(Tab).use(Tabs).use(Icon).use(Tabbar).use(TabbarItem).use(Button).use(Swipe).use(SwipeItem);
+import {
+  Divider,
+  Row,
+  Col,
+  Search,
+  Tab,
+  Tabs,
+  Icon,
+  Tabbar,
+  TabbarItem,
+  Button,
+  Swipe,
+  SwipeItem
+} from "vant";
+Vue.use(Divider)
+  .use(Row)
+  .use(Col)
+  .use(Search)
+  .use(Tab)
+  .use(Tabs)
+  .use(Icon)
+  .use(Tabbar)
+  .use(TabbarItem)
+  .use(Button)
+  .use(Swipe)
+  .use(SwipeItem);
 
 export default {
   data() {
@@ -90,14 +119,14 @@ export default {
   },
   components: { Abstracts },
   methods: {
-    change(){
-      this.fu=!this.fu
+    change() {
+      this.fu = !this.fu;
     },
-    image(fu){
+    image(fu) {
       if (fu) {
         return this.images1;
       } else {
-        return this.images2
+        return this.images2;
       }
     },
     // 轮播图预览

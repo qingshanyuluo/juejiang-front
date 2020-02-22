@@ -1,12 +1,13 @@
 <template>
   <div>
-    <div v-if="isFirst" 
-    style="
+    <div
+      v-if="isFirst"
+      style="
       margin: 8px;
       height: 280px;
       border-radius: 10px;
       border: solid;
-      border-color: lightgrey;" 
+      border-color: lightgrey;"
     >
       <van-row>
         <router-link to="/article">
@@ -15,10 +16,26 @@
             height="120"
             :src="image"
           />
-          <h5 style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 3px;">{{ title }}</h5>
-          <h6 style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 3px;">{{ subtitle }}</h6>
-          <h6 style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 3px; color: lightgrey">{{ description1 }}</h6>
-          <h6 style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 23px; color: lightgrey">{{ description2 }}</h6>
+          <h5
+            style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 3px;"
+          >
+            {{ title }}
+          </h5>
+          <h6
+            style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 3px;"
+          >
+            {{ subtitle }}
+          </h6>
+          <h6
+            style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 3px; color: lightgrey"
+          >
+            {{ description1 }}
+          </h6>
+          <h6
+            style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 23px; color: lightgrey"
+          >
+            {{ description2 }}
+          </h6>
         </router-link>
       </van-row>
 
@@ -34,23 +51,31 @@
           />
         </van-col>
         <van-col span="10">
-          <h6 style="font-weight:normal; color: darkgrey;margin-top: -4px;  margin-right: -8px; text-align: left">{{author}}</h6>
+          <h6
+            style="font-weight:normal; color: darkgrey;margin-top: -4px;  margin-right: -8px; text-align: left"
+          >
+            {{ author }}
+          </h6>
         </van-col>
         <van-col span="1.5">
-          <van-icon style="margin-top: 1px; margin-left: 1px;" name="good-job-o" />
+          <van-icon
+            style="margin-top: 1px; margin-left: 1px;"
+            name="good-job-o"
+          />
         </van-col>
         <van-col span="1.5">
           <h5 style="margin-left: 8px; margin-top: 1px;">{{ likes }}</h5>
         </van-col>
       </van-row>
     </div>
-    <div v-if="!isFirst" 
-    style="
+    <div
+      v-if="!isFirst"
+      style="
       margin: 8px;
       height: 370px;
       border-radius: 10px;
       border: solid;
-      border-color: lightgrey;" 
+      border-color: lightgrey;"
     >
       <van-row>
         <router-link to="/article">
@@ -59,10 +84,26 @@
             height="220"
             :src="image"
           />
-          <h5 style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 3px;">{{ title }}</h5>
-          <h6 style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 3px;">{{ subtitle }}</h6>
-          <h6 style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 3px; color: lightgrey">{{ description1 }}</h6>
-          <h6 style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 23px; color: lightgrey">{{ description2 }}</h6>
+          <h5
+            style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 3px;"
+          >
+            {{ title }}
+          </h5>
+          <h6
+            style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 3px;"
+          >
+            {{ subtitle }}
+          </h6>
+          <h6
+            style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 3px; color: lightgrey"
+          >
+            {{ description1 }}
+          </h6>
+          <h6
+            style="margin-left:9px ;text-align: left;margin-top: 5px; color: #000; margin-bottom: 23px; color: lightgrey"
+          >
+            {{ description2 }}
+          </h6>
         </router-link>
       </van-row>
 
@@ -78,10 +119,17 @@
           />
         </van-col>
         <van-col span="10">
-          <h6 style="font-weight:normal; color: darkgrey;margin-top: -4px;  margin-right: -8px; text-align: left">{{author}}</h6>
+          <h6
+            style="font-weight:normal; color: darkgrey;margin-top: -4px;  margin-right: -8px; text-align: left"
+          >
+            {{ author }}
+          </h6>
         </van-col>
         <van-col span="1.5">
-          <van-icon style="margin-top: 1px; margin-left: 1px;" name="good-job-o" />
+          <van-icon
+            style="margin-top: 1px; margin-left: 1px;"
+            name="good-job-o"
+          />
         </van-col>
         <van-col span="1.5">
           <h5 style="margin-left: 8px; margin-top: 1px;">{{ likes }}</h5>
@@ -104,10 +152,7 @@ export default {
     authorImage: String,
     likes: Number
   }
-
-}
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

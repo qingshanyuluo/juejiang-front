@@ -1,12 +1,11 @@
 <template>
-	<div id="searchXinde"></div>
+  <div id="searchXinde"></div>
 </template>
 
 <script>
-	export default{
-		name:"searchXinde"
-	}
+export default {
+  name: "searchXinde"
+};
 </script>
 
-<style>
-</style>
+<style></style>

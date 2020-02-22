@@ -7,17 +7,17 @@ import now2 from "../views/faceAnalyse.vue";
 import SignIn from "../views/SignIn.vue";
 import myorder from "../views/myorder.vue";
 import report from "../components/report.vue";
-import Main from "../views/main/Main.vue"
-import Home from "../views/main/Home.vue"
-import Explorer from "../views/main/Explorer.vue"
-import Shop from "../views/main/Shop.vue"
-import Personal from "../views/main/Personal.vue"
+import Main from "../views/main/Main.vue";
+import Home from "../views/main/Home.vue";
+import Explorer from "../views/main/Explorer.vue";
+import Shop from "../views/main/Shop.vue";
+import Personal from "../views/main/Personal.vue";
 import search from "../views/search.vue";
 import Add from "../views/Add.vue";
 import Article from "../views/Article.vue";
-import Info from "../views/Info.vue"
-import Goods from "../views/Goods.vue"
-import Tag from "../views/infos/Tag.vue"
+import Info from "../views/Info.vue";
+import Goods from "../views/Goods.vue";
+import Tag from "../views/infos/Tag.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -45,7 +45,7 @@ const routes = [
         path: "/personal",
         name: "Personal",
         component: Personal
-      },
+      }
     ]
   },
 
@@ -69,34 +69,34 @@ const routes = [
     component: report
   },
   {
-  	  path:"/now1",
-  	  name:"now1",
-  	  component:now1
+    path: "/now1",
+    name: "now1",
+    component: now1
   },
   {
-  	  path:"/now2",
-  	  name:"now2",
-  	  component:now2
+    path: "/now2",
+    name: "now2",
+    component: now2
   },
   {
     path: "/goodsComment",
-    component: goodsComment,
+    component: goodsComment
   },
   {
     path: "/goodsInfo",
-    component: goodsInfo,
+    component: goodsInfo
   },
   {
     path: "/goods",
-    component: Goods,
+    component: Goods
   },
   {
     path: "/add",
-    component: Add,
+    component: Add
   },
   {
     path: "/sign-in",
-    component: SignIn,
+    component: SignIn
   },
   {
     path: "/info",
@@ -106,7 +106,6 @@ const routes = [
     path: "/tag",
     component: Tag
   }
-
 ];
 
 const router = new VueRouter({

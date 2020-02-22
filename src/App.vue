@@ -1,20 +1,18 @@
 <template>
   <div id="app">
     <transition name="fade">
-      <router-view/>
+      <router-view />
     </transition>
   </div>
 </template>
 
 <script>
 export default {
-  components: {
-  },
-}
+  components: {}
+};
 </script>
 
 <style>
-
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -36,13 +34,16 @@ export default {
   color: #42b983;
 }
 
-  .fade-enter, .fade-leave-to {
-    opacity: 0
-  }
-  .fade-leave, .fade-enter-to {
-    opacity: 1
-  }
-  .fade-enter-active, .fade-leave-active {
-    transition: all .4s
-  }
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-leave,
+.fade-enter-to {
+  opacity: 1;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.4s;
+}
 </style>

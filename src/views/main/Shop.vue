@@ -9,11 +9,11 @@
     </header>
     <div class="bg"></div>
     <section class="type-wrap">
-      <div class="type-items" v-for="(items,index) in typeList" :key="index">
+      <div class="type-items" v-for="(items, index) in typeList" :key="index">
         <div class="type-icons" @click="changeTypeList(index)">
           <img :src="items.typeIcons" alt />
         </div>
-        <span>{{items.typeName}}</span>
+        <span>{{ items.typeName }}</span>
       </div>
     </section>
     <div class="goods-list">
@@ -23,14 +23,14 @@
       </p>
       <van-grid :border="false">
         <van-grid-item
-          :to="{path:'/goods'}"
+          :to="{ path: '/goods' }"
           :icon="items.icons"
           :text="items.name"
-          v-for="(items,index) in showList"
+          v-for="(items, index) in showList"
           :key="index"
         />
       </van-grid>
-	  <br><br>
+      <br /><br />
     </div>
   </div>
 </template>
@@ -184,77 +184,76 @@ export default {
         ]
       ],
       showList: [
-          {
-            icons: require("@/assets/img/jiemian.png"),
-            name: "洁面"
-          },
-          {
-            icons: require("@/assets/img/huazhuangs.png"),
-            name: "化妆水"
-          },
-          {
-            icons: require("@/assets/img/jinghua.png"),
-            name: "精华"
-          },
-          {
-            icons: require("@/assets/img/luye.png"),
-            name: "乳液"
-          },
-          {
-            icons: require("@/assets/img/面霜.png"),
-            name: "面霜"
-          },
-          {
-            icons: require("@/assets/img/眼部护理.png"),
-            name: "眼部护理"
-          },
-          {
-            icons: require("@/assets/img/防晒.png"),
-            name: "防晒"
-          },
-          {
-            icons: require("@/assets/img/妆前隔离.png"),
-            name: "妆前隔离"
-          },
-          {
-            icons: require("@/assets/img/粉底.png"),
-            name: "粉底"
-          },
-          {
-            icons: require("@/assets/img/粉饼.png"),
-            name: "粉饼"
-          },
-          {
-            icons: require("@/assets/img/遮瑕.png"),
-            name: "遮瑕"
-          },
-          {
-            icons: require("@/assets/img/唇膏.png"),
-            name: "唇膏"
-          },
-          {
-            icons: require("@/assets/img/卸妆.png"),
-            name: "卸妆"
-          },
-          {
-            icons: require("@/assets/img/BB霜.png"),
-            name: "BB霜"
-          },
-          {
-            icons: require("@/assets/img/CC霜.png"),
-            name: "CC霜"
-          },
-          {
-            icons: require("@/assets/img/面部护理油.png"),
-            name: "面部护理油"
-          }
-        ],
+        {
+          icons: require("@/assets/img/jiemian.png"),
+          name: "洁面"
+        },
+        {
+          icons: require("@/assets/img/huazhuangs.png"),
+          name: "化妆水"
+        },
+        {
+          icons: require("@/assets/img/jinghua.png"),
+          name: "精华"
+        },
+        {
+          icons: require("@/assets/img/luye.png"),
+          name: "乳液"
+        },
+        {
+          icons: require("@/assets/img/面霜.png"),
+          name: "面霜"
+        },
+        {
+          icons: require("@/assets/img/眼部护理.png"),
+          name: "眼部护理"
+        },
+        {
+          icons: require("@/assets/img/防晒.png"),
+          name: "防晒"
+        },
+        {
+          icons: require("@/assets/img/妆前隔离.png"),
+          name: "妆前隔离"
+        },
+        {
+          icons: require("@/assets/img/粉底.png"),
+          name: "粉底"
+        },
+        {
+          icons: require("@/assets/img/粉饼.png"),
+          name: "粉饼"
+        },
+        {
+          icons: require("@/assets/img/遮瑕.png"),
+          name: "遮瑕"
+        },
+        {
+          icons: require("@/assets/img/唇膏.png"),
+          name: "唇膏"
+        },
+        {
+          icons: require("@/assets/img/卸妆.png"),
+          name: "卸妆"
+        },
+        {
+          icons: require("@/assets/img/BB霜.png"),
+          name: "BB霜"
+        },
+        {
+          icons: require("@/assets/img/CC霜.png"),
+          name: "CC霜"
+        },
+        {
+          icons: require("@/assets/img/面部护理油.png"),
+          name: "面部护理油"
+        }
+      ]
     };
   },
   methods: {
-   
     changeTypeList(e) {
-        this.showList = this.goodsList[e]
+      this.showList = this.goodsList[e];
     }
   }
 };
@@ -342,6 +341,5 @@ header {
 }
 p {
   margin: 0;
-}
-</style>>
-    
+}</style
+>>

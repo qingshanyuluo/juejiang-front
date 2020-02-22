@@ -1,8 +1,21 @@
 <template>
-  <van-tabbar route v-model="active" inactive-color="#777777" active-color="#000000">
-    <van-tabbar-item v-for="(item,index) in tabbars" :key="index" :to="(item.name)">
-      <span>{{item.title}}</span>
-      <img slot="icon" slot-scope="props" :src="props.active ? item.active : item.normal" />
+  <van-tabbar
+    route
+    v-model="active"
+    inactive-color="#777777"
+    active-color="#000000"
+  >
+    <van-tabbar-item
+      v-for="(item, index) in tabbars"
+      :key="index"
+      :to="item.name"
+    >
+      <span>{{ item.title }}</span>
+      <img
+        slot="icon"
+        slot-scope="props"
+        :src="props.active ? item.active : item.normal"
+      />
     </van-tabbar-item>
   </van-tabbar>
 </template>
@@ -69,7 +82,6 @@ export default {
     }
   }
 };
-</script> 
+</script>
 
-<style>
-</style>
+<style></style>

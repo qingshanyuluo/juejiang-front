@@ -37,8 +37,8 @@
           </div>
           <van-uploader :after-read="afterRead">
             <div class="diy-items">
-                <div></div>
-                <span>测肤</span>
+              <div></div>
+              <span>测肤</span>
             </div>
           </van-uploader>
           <div class="diy-items" @click="goAddGoods">
@@ -120,10 +120,14 @@
         <p>护肤品有效期，我帮你记录</p>
         <van-button round type="primary" size="small">添加开封</van-button>
         <div class="mine-list">
-          <div class="mine-items" v-for="(items,index) in mineList" :key="index">
+          <div
+            class="mine-items"
+            v-for="(items, index) in mineList"
+            :key="index"
+          >
             <div></div>
             <!-- 放置图片处 -->
-            <span>剩余 {{items.mineDays}} 天</span>
+            <span>剩余 {{ items.mineDays }} 天</span>
           </div>
         </div>
       </div>
@@ -132,12 +136,12 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { Uploader } from 'vant';
-import axios from 'axios'
-import VueAxios from 'vue-axios'
- 
-Vue.use(VueAxios, axios)
+import Vue from "vue";
+import { Uploader } from "vant";
+import axios from "axios";
+import VueAxios from "vue-axios";
+
+Vue.use(VueAxios, axios);
 Vue.use(Uploader);
 export default {
   data() {
@@ -175,21 +179,21 @@ export default {
     },
     afterRead(file) {
       var formdata = new FormData();
-      formdata.append('file', file.file);
+      formdata.append("file", file.file);
       var _this = this;
       var settings = {
-        "url": "http://localhost:8081/cefu",
-        "method": "POST",
-        "tixmeout": 0,
-        "data": formdata
-      }
+        url: "http://localhost:8081/cefu",
+        method: "POST",
+        tixmeout: 0,
+        data: formdata
+      };
       Vue.axios(settings)
-        .then(function (response) {
+        .then(function(response) {
           console.log(response);
           _this.$store.dispatch("setRes", response.data);
-          _this.$router.push({ path: "/now2"})
+          _this.$router.push({ path: "/now2" });
         })
-        .catch(function (error) {
+        .catch(function(error) {
           console.log(error);
         });
     }

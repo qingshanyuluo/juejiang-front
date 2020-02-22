@@ -18,29 +18,36 @@
         </div>
         <div class="user-counts">
           <img src="../assets/img/jb.png" alt />
-          <div>{{allIntegral}}</div>
+          <div>{{ allIntegral }}</div>
         </div>
       </div>
 
-      <van-button icon="flag-o" round type="info" size="small" @click="signin()">{{sign?'已签到':'点击签到'}}</van-button>
+      <van-button
+        icon="flag-o"
+        round
+        type="info"
+        size="small"
+        @click="signin()"
+        >{{ sign ? "已签到" : "点击签到" }}</van-button
+      >
     </header>
 
     <main>
       <div class="days-wrap">
         <p>
           加油！已连续签到
-          <span>{{days}}</span>
+          <span>{{ days }}</span>
           天
         </p>
         <div>
           <div class="calendar-wrap">
             <div
-              :class="{gold: index < days, grey: index >= days}"
-              v-for="(items,index) in calendarList"
+              :class="{ gold: index < days, grey: index >= days }"
+              v-for="(items, index) in calendarList"
               :key="index"
             >
-              <div class="calendar">+{{items.integral}}</div>
-              <span>{{items.date}}</span>
+              <div class="calendar">+{{ items.integral }}</div>
+              <span>{{ items.date }}</span>
             </div>
           </div>
           <span class="calendar-more">
@@ -80,15 +87,19 @@
           </p>
         </div>
         <div class="task-content">
-          <div class="new-content" v-for="(items,index) in taskList" :key="index">
+          <div
+            class="new-content"
+            v-for="(items, index) in taskList"
+            :key="index"
+          >
             <div class="new-icon"></div>
             <div class="new-txt">
               <div>
-                <p>{{items.taskName}}</p>
-                <p>基金 +{{items.taskReward}}</p>
+                <p>{{ items.taskName }}</p>
+                <p>基金 +{{ items.taskReward }}</p>
               </div>
             </div>
-            <div class="new-tips">{{items.taskTips}}</div>
+            <div class="new-tips">{{ items.taskTips }}</div>
           </div>
         </div>
       </div>
@@ -101,7 +112,7 @@ import Vue from "vue";
 import { Button } from "vant";
 Vue.use(Button);
 import { NavBar } from "vant";
-import { Toast } from 'vant';
+import { Toast } from "vant";
 
 Vue.use(Toast);
 Vue.use(NavBar);
@@ -110,7 +121,7 @@ export default {
     signin() {
       this.days++;
       this.sign = true;
-      Toast.success('签到成功');
+      Toast.success("签到成功");
     },
     back() {
       this.$router.go(-1);
