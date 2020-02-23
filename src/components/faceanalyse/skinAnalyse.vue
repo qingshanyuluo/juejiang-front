@@ -15,12 +15,11 @@
           style=" padding-left: 8px; padding-right: 8px;  background:rgba(8, 206, 200, 0.1); border-radius:10px;margin-top: -8px;  border: 10px solid white ; "
         >
           <p style="  font-size:small; text-align: left;">
-            你的肌肤正常偏油，耐受性很好，现阶段护理要点如下：<br />·洗脸时不要追求涩感，要温和清洁，并做好基础保湿哦
-            <br />
-            ·针对黑头问题，要注意清洁别过度，可以搭配调理角质代谢、疏通毛孔的护肤品<br />
-            ·黑眼圈以血管型和结构型为主，除了健康作息外，还可以使用促进眼周循环的眼霜
-            <br />
-            ·要坚持防晒哦，不仅能防晒黑，还能防晒老哈
+            你的肌肤正常偏油，耐受性很好，现阶段护理要点如下：
+            <br />·洗脸时不要追求涩感，要温和清洁，并做好基础保湿哦
+            <br />·针对黑头问题，要注意清洁别过度，可以搭配调理角质代谢、疏通毛孔的护肤品
+            <br />·黑眼圈以血管型和结构型为主，除了健康作息外，还可以使用促进眼周循环的眼霜
+            <br />·要坚持防晒哦，不仅能防晒黑，还能防晒老哈
           </p>
         </div>
         <van-divider style="margin-top: 0px;" />
@@ -63,12 +62,11 @@
           <van-col span="6">
             <span
               style=" margin-left: 9px; text-align: left;font-size: large; font-weight: 1000; "
-              >出油情况</span
-            >
+            >出油情况</span>
           </van-col>
           <van-col span="1"></van-col>
           <van-col>
-            <div class="youmessage">中性偏油</div>
+            <div class="youmessage">{{you}}</div>
           </van-col>
         </van-row>
         <br />
@@ -80,13 +78,12 @@
             <van-col span="4" style="margin-top: -11px;">中性</van-col>
             <van-col span="8" style="margin-top: -11px;">偏油</van-col>
           </van-row>
-          <br /><br />
+          <br />
+          <br />
 
-          <span v-for="(item, index) of oillist" :key="index">
+          <span v-for="(item,index) of oillist" :key="index">
             <van-row>
-              <van-col span="3" style="margin-top: -16px;">{{
-                item.text
-              }}</van-col>
+              <van-col span="3" style="margin-top: -16px;">{{item.text}}</van-col>
               <van-col span="19">
                 <van-progress
                   style="margin-top: -11px;"
@@ -98,95 +95,84 @@
                 />
               </van-col>
 
-              <br /><br />
+              <br />
+              <br />
             </van-row>
           </span>
           <div
             style=" padding-left: 8px padding-right: 8px; border-radius:10px;margin-top: -8px;  border: 10px solid white ; "
           >
             <p style="  font-size:small; text-align: left;">
-              你的肌肤正常偏油，耐受性很好，现阶段护理要点如下：<br />·洗脸时不要追求涩感，要温和清洁，并做好基础保湿哦
-              <br />
-              ·针对黑头问题，要注意清洁别过度，可以搭配调理角质代谢、疏通毛孔的护肤品<br />
-              ·黑眼圈以血管型和结构型为主，除了健康作息外，还可以使用促进眼周循环的眼霜
-              <br />
-              ·要坚持防晒哦，不仅能防晒黑，还能防晒老哈
+              你的肌肤正常偏油，耐受性很好，现阶段护理要点如下：
+              <br />·洗脸时不要追求涩感，要温和清洁，并做好基础保湿哦
+              <br />·针对黑头问题，要注意清洁别过度，可以搭配调理角质代谢、疏通毛孔的护肤品
+              <br />·黑眼圈以血管型和结构型为主，除了健康作息外，还可以使用促进眼周循环的眼霜
+              <br />·要坚持防晒哦，不仅能防晒黑，还能防晒老哈
             </p>
           </div>
           <br />
         </div>
-
         <van-divider style="margin-top: 0px;" />
       </van-tab>
       <van-tab>
         <div slot="title">细纹</div>
-        <div
-          style=" margin-left: 9px; text-align: left;font-size: large; font-weight: 1000; "
-        >
-          细纹
-        </div>
+        <div style=" margin-left: 9px; text-align: left;font-size: large; font-weight: 1000; ">细纹</div>
         <br />
         <van-row type="flex">
-          <van-col span="6"
-            ><van-image width="70" height="80" :src="taitou1"></van-image
-          ></van-col>
-          <van-col span="6"
-            ><van-image width="70" height="80" :src="leigou1"></van-image
-          ></van-col>
-          <van-col span="6"
-            ><van-image width="70" height="80" :src="faling1"></van-image
-          ></van-col>
-          <van-col span="6"
-            ><van-image width="70" height="80" :src="xiaoji"></van-image
-          ></van-col>
+          <van-col span="6">
+            <van-image width="70" height="80" :src="taitou1"></van-image>
+          </van-col>
+          <van-col span="6">
+            <van-image width="70" height="80" :src="leigou1"></van-image>
+          </van-col>
+          <van-col span="6">
+            <van-image width="70" height="80" :src="faling1"></van-image>
+          </van-col>
+          <van-col span="6">
+            <van-image width="70" height="80" :src="xiaoji"></van-image>
+          </van-col>
         </van-row>
         <br />
         <div
           style=" padding-left: 8px;  padding-right: 8px; border-radius:10px;margin-top: -8px;  border: 10px solid white ; "
         >
           <p style="  font-size:small; text-align: left;">
-            你的肌肤正常偏油，耐受性很好，现阶段护理要点如下：<br />·洗脸时不要追求涩感，要温和清洁，并做好基础保湿哦
-            <br />
-            ·针对黑头问题，要注意清洁别过度，可以搭配调理角质代谢、疏通毛孔的护肤品<br />
-            ·黑眼圈以血管型和结构型为主，除了健康作息外，还可以使用促进眼周循环的眼霜
-            <br />
-            ·要坚持防晒哦，不仅能防晒黑，还能防晒老哈
+            你的肌肤正常偏油，耐受性很好，现阶段护理要点如下：
+            <br />·洗脸时不要追求涩感，要温和清洁，并做好基础保湿哦
+            <br />·针对黑头问题，要注意清洁别过度，可以搭配调理角质代谢、疏通毛孔的护肤品
+            <br />·黑眼圈以血管型和结构型为主，除了健康作息外，还可以使用促进眼周循环的眼霜
+            <br />·要坚持防晒哦，不仅能防晒黑，还能防晒老哈
           </p>
         </div>
         <van-divider style="margin-top: 0px;" />
       </van-tab>
       <van-tab>
         <div slot="title">痘痘</div>
-        <div
-          style=" margin-left: 9px; text-align: left;font-size: large; font-weight: 1000; "
-        >
-          痘痘
-        </div>
+        <div style=" margin-left: 9px; text-align: left;font-size: large; font-weight: 1000; ">痘痘</div>
         <br />
         <van-row>
-          <van-col span="11"
-            ><div>
-              <span style=" font-size: x-large; color: #a2dcc9;">0</span
-              ><br /><span style="font-size: small ; color:#999999"
-                >明显痘痘数量</span
-              >
+          <van-col span="11">
+            <div>
+              <span style=" font-size: x-large; color: #a2dcc9;">{{doulist[0].number}}</span>
+              <br />
+              <span style="font-size: small ; color:#999999">明显痘痘数量</span>
             </div>
           </van-col>
-          <van-col span="2"
-            ><div
+          <van-col span="2">
+            <div
               style=" margin-top: 6px; margin-left: 13px; width: 1px;height: 30px; background:#DCDCDC"
             ></div>
           </van-col>
-          <van-col span="11"
-            ><div style="border-left: #C8C9CC;">
-              <span style=" font-size: x-large;  color: #a2dcc9;">0</span
-              ><br /><span style="font-size: small ; color:#999999"
-                >明显痘印数量</span
-              >
-            </div></van-col
-          >
+          <van-col span="11">
+            <div style="border-left: #C8C9CC;">
+              <span style=" font-size: x-large;  color: #a2dcc9;">{{doulist[1].number}}</span>
+              <br />
+              <span style="font-size: small ; color:#999999">明显痘印数量</span>
+            </div>
+          </van-col>
         </van-row>
-        <br /><br />
+        <br />
+        <br />
         <div :style="backgroundDou">
           <van-row type="flex">
             <van-col span="3"></van-col>
@@ -194,13 +180,12 @@
             <van-col span="4" style="margin-top: -11px;">中度</van-col>
             <van-col span="8" style="margin-top: -11px;">重度</van-col>
           </van-row>
-          <br /><br />
+          <br />
+          <br />
 
-          <span v-for="(item, index) of doulist" :key="index">
+          <span v-for="(item,index) of doulist" :key="index">
             <van-row>
-              <van-col span="3" style="margin-top: -16px;">{{
-                item.text
-              }}</van-col>
+              <van-col span="3" style="margin-top: -16px;">{{item.text}}</van-col>
               <van-col span="19">
                 <van-progress
                   style="margin-top: -11px;"
@@ -212,46 +197,39 @@
                 />
               </van-col>
 
-              <br /><br />
+              <br />
+              <br />
             </van-row>
           </span>
           <div
             style=" padding-left: 8px; padding-right: 8px; border-radius:10px;margin-top: -8px;  border: 10px solid white ; "
           >
             <p style="  font-size:small; text-align: left;">
-              你的肌肤正常偏油，耐受性很好，现阶段护理要点如下：<br />·洗脸时不要追求涩感，要温和清洁，并做好基础保湿哦
-              <br />
-              ·针对黑头问题，要注意清洁别过度，可以搭配调理角质代谢、疏通毛孔的护肤品<br />
-              ·黑眼圈以血管型和结构型为主，除了健康作息外，还可以使用促进眼周循环的眼霜
-              <br />
-              ·要坚持防晒哦，不仅能防晒黑，还能防晒老哈
+              你的肌肤正常偏油，耐受性很好，现阶段护理要点如下：
+              <br />·洗脸时不要追求涩感，要温和清洁，并做好基础保湿哦
+              <br />·针对黑头问题，要注意清洁别过度，可以搭配调理角质代谢、疏通毛孔的护肤品
+              <br />·黑眼圈以血管型和结构型为主，除了健康作息外，还可以使用促进眼周循环的眼霜
+              <br />·要坚持防晒哦，不仅能防晒黑，还能防晒老哈
             </p>
           </div>
           <br />
         </div>
-
         <van-divider style="margin-top: 0px;" />
       </van-tab>
       <van-tab>
         <div slot="title">黑头</div>
-        <div
-          style=" margin-left: 9px; text-align: left;font-size: large; font-weight: 1000; "
-        >
-          黑头
-        </div>
+        <div style=" margin-left: 9px; text-align: left;font-size: large; font-weight: 1000; ">黑头</div>
         <br />
         <van-row type="flex">
-          <van-col span="12"
-            ><van-image width="70" height="80" :src="hei1"></van-image>
-            <br /><span style="font-size: ; color:#a2dcc9 ;">{{
-              heilist.heige
-            }}</span>
+          <van-col span="12">
+            <van-image width="70" height="80" :src="hei1"></van-image>
+            <br />
+            <span style="font-size: ; color:#a2dcc9 ;">{{heilist.heige}}</span>
           </van-col>
-          <van-col span="12"
-            ><van-image width="70" height="80" :src="hei"></van-image>
-            <br /><span style="font-size:; color:#a2dcc9 ;"
-              >{{ heilist.heizhanbi }}%</span
-            >
+          <van-col span="12">
+            <van-image width="70" height="80" :src="hei"></van-image>
+            <br />
+            <span style="font-size:; color:#a2dcc9 ;">{{heilist.heizhanbi}}%</span>
           </van-col>
         </van-row>
         <br />
@@ -259,12 +237,11 @@
           style=" padding-left: 8px;padding-right: 8px; border-radius:10px;margin-top: -8px;  border: 10px solid white ; "
         >
           <p style="  font-size:small; text-align: left;">
-            你的肌肤正常偏油，耐受性很好，现阶段护理要点如下：<br />·洗脸时不要追求涩感，要温和清洁，并做好基础保湿哦
-            <br />
-            ·针对黑头问题，要注意清洁别过度，可以搭配调理角质代谢、疏通毛孔的护肤品<br />
-            ·黑眼圈以血管型和结构型为主，除了健康作息外，还可以使用促进眼周循环的眼霜
-            <br />
-            ·要坚持防晒哦，不仅能防晒黑，还能防晒老哈
+            你的肌肤正常偏油，耐受性很好，现阶段护理要点如下：
+            <br />·洗脸时不要追求涩感，要温和清洁，并做好基础保湿哦
+            <br />·针对黑头问题，要注意清洁别过度，可以搭配调理角质代谢、疏通毛孔的护肤品
+            <br />·黑眼圈以血管型和结构型为主，除了健康作息外，还可以使用促进眼周循环的眼霜
+            <br />·要坚持防晒哦，不仅能防晒黑，还能防晒老哈
           </p>
         </div>
         <van-divider style="margin-top: 0px;" />
@@ -280,27 +257,26 @@
         <van-row type="flex">
           <van-col span="2"></van-col>
           <van-col span="12">
-            <van-image height="" width="" :src="mao"> </van-image>
+            <van-image height width :src="mao"></van-image>
           </van-col>
-          <van-col span="9"
-            ><br /><br /><br /><span
-              style=" font-size:xx-large; color: #a2dcc9;"
-              >0.33%</span
-            ><br /><span style="font-size: medium ; color:#999999"
-              >毛孔占比</span
-            >
+          <van-col span="9">
+            <br />
+            <br />
+            <br />
+            <span style=" font-size:xx-large; color: #a2dcc9;">{{pore}}</span>
+            <br />
+            <span style="font-size: medium ; color:#999999">毛孔占比</span>
           </van-col>
         </van-row>
         <div
           style=" padding-left: 8px;  padding-right: 8px; border-radius:10px;margin-top: -8px;  border: 10px solid white ; "
         >
           <p style="  font-size:small; text-align: left;">
-            你的肌肤正常偏油，耐受性很好，现阶段护理要点如下：<br />·洗脸时不要追求涩感，要温和清洁，并做好基础保湿哦
-            <br />
-            ·针对黑头问题，要注意清洁别过度，可以搭配调理角质代谢、疏通毛孔的护肤品<br />
-            ·黑眼圈以血管型和结构型为主，除了健康作息外，还可以使用促进眼周循环的眼霜
-            <br />
-            ·要坚持防晒哦，不仅能防晒黑，还能防晒老哈
+            你的肌肤正常偏油，耐受性很好，现阶段护理要点如下：
+            <br />·洗脸时不要追求涩感，要温和清洁，并做好基础保湿哦
+            <br />·针对黑头问题，要注意清洁别过度，可以搭配调理角质代谢、疏通毛孔的护肤品
+            <br />·黑眼圈以血管型和结构型为主，除了健康作息外，还可以使用促进眼周循环的眼霜
+            <br />·要坚持防晒哦，不仅能防晒黑，还能防晒老哈
           </p>
         </div>
       </van-tab>
@@ -328,7 +304,49 @@ export default {
     age: function() {
       // 通过vuex的getters方法来获取state里面的数据
       return this.$store.getters.getAge;
-    }
+    },
+    ratedata: function() {
+      return this.$store.getters.getS;
+    } /* 评分 */,
+    you: function() {
+      var m = this.$store.getters.get_skin_type.type;
+      console.log(m);
+      if (m === "mid") {
+        return "中性";
+      } else if (m === "dry") {
+        return "干性";
+      } else if (m === "mix") {
+        return "混合型";
+      } else if (m === "oil") {
+        return "油性";
+      } else if (m === "mid_oil") {
+        return "中性偏油";
+      } else {
+        return "中性偏干";
+      }
+    },
+    skin_type: function() {
+      return this.$store.getters.get_skin_type.category[0].score;
+    },
+    Pockmark: function() {
+      return this.$store.getters.getPockmark.category[0].score;
+	},
+	pore:function() {
+		return this.$store.getters.getPore.count / 100;
+	}
+  },
+  created: function() {
+	  var n = this.$store.getters.get_skin_type;
+	  for (let index = 0; index < this.oillist.length; index++) {
+	  		this.oillist[index].number = n.category[index].score;
+	  }
+	  var Pockmark = this.$store.getters.getPockmark;
+	  for (let index = 0; index < this.doulist.length; index++) {
+		  this.doulist[index].number = Pockmark.category[index].count;
+	  }
+	  var blackhead = this.$store.getters.getBlackhead;
+	  this.heilist.heige = blackhead.count;
+	  this.heilist.heizhanbi = 100 - blackhead.score;
   },
   data() {
     return {
@@ -357,7 +375,6 @@ export default {
       },
 
       xiding: "true",
-      ratedata: 86 /* 评分 */,
       lianimg: require("@/assets/img/renlian.png") /* 80分90以下顶部显示的人脸 */,
       lianimg1: require("@/assets/img/renlian1.png") /* 90分以上顶部显示的人脸 */,
       oilimg: require("@/assets/img/oil.png") /* 出油情况背景图片 */,
