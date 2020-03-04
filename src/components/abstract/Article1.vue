@@ -3,7 +3,6 @@
     <van-col span="0.5"><h1 /></van-col>
     <van-col span="23">
       <van-row>
-        <router-link to="/article">
           <van-image
             style=" border-radius: 10px 10px 10px 10px; left:3.3px  "
             width="353"
@@ -20,7 +19,6 @@
           >
             {{ description }}
           </h5>
-        </router-link>
       </van-row>
 
       <van-row>

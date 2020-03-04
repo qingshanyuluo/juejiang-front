@@ -1,15 +1,17 @@
 <template>
   <div>
     <div v-for="(item, index) in articles[type]" :key="index">
-      <article1
-        :image="item.image"
-        :title="item.title"
-        :description="item.description"
-        :comments="item.comments"
-        :likes="item.likes"
-        :author="item.author"
-        :authorImage="item.authorImage"
-      ></article1>
+        <router-link :to="{ path: '/article', query: {id: item.articleId } }">
+        <article1
+          :image="item.image"
+          :title="item.title"
+          :description="item.description"
+          :comments="item.comments"
+          :likes="item.likes"
+          :author="item.author"
+          :authorImage="item.authorImage"
+        ></article1>
+        </router-link>
     </div>
   </div>
 </template>

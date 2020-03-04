@@ -1,5 +1,6 @@
 <template>
   <div>
+    <router-link :to="{ path: '/article', query: {id: this.id } }">
     <div
       v-if="isFirst"
       style="
@@ -10,7 +11,6 @@
       border-color: lightgrey;"
     >
       <van-row>
-        <router-link to="/article">
           <van-image
             style=" border-radius: 10px 10px 10px 10px; left:3.3px  "
             height="120"
@@ -36,7 +36,6 @@
           >
             {{ description2 }}
           </h6>
-        </router-link>
       </van-row>
 
       <van-row>
@@ -78,7 +77,6 @@
       border-color: lightgrey;"
     >
       <van-row>
-        <router-link to="/article">
           <van-image
             style=" border-radius: 10px 10px 10px 10px; left:3.3px  "
             height="220"
@@ -104,7 +102,6 @@
           >
             {{ description2 }}
           </h6>
-        </router-link>
       </van-row>
 
       <van-row>
@@ -136,12 +133,14 @@
         </van-col>
       </van-row>
     </div>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
   props: {
+    id: Number,
     isFirst: Boolean,
     image: String,
     title: String,

@@ -3,6 +3,7 @@
     <van-col span="12">
       <article2
         :isFirst="true"
+        :id="first.articleId"
         :image="first.image"
         :title="first.title"
         :subtitle="first.subtitle"
@@ -15,6 +16,7 @@
         v-for="(item, index) in articles[1]"
         :key="index"
         :isFirst="false"
+        :id="item.articleId"
         :image="item.image"
         :title="item.title"
         :subtitle="item.subtitle"
@@ -29,6 +31,7 @@
         v-for="(item, index) in articles[1]"
         :key="index"
         :isFirst="false"
+        :id="item.articleId"
         :image="item.image"
         :title="item.title"
         :subtitle="item.subtitle"

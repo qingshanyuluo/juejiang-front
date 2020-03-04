@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="articleMessage" v-for="(arti, i) in article[0]" v-bind:key="i">
+    <div id="articleMessage" >
       <van-sticky :offset-top="0">
         <van-nav-bar
           style="background:rgba(x,x,x,0.3);"
@@ -342,8 +342,20 @@ Vue.use(Toast);
 import { NavBar } from "vant";
 Vue.use(NavBar);
 export default {
+  created: function() {
+    console.log(this.$route.query.id)
+    var id = this.$route.query.id
+    this.article.forEach(element => {
+      element.forEach(element => {
+        if (element.id == id) {
+          this.arti = element
+        }
+      });
+    });
+  },
   data() {
     return {
+      arti: {},
       //二维数组，第一维代表类别第二维代表每个文章 id 直接由两个下标表示，从0到9一共十个类别
       article: [
         [
