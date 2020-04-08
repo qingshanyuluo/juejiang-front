@@ -180,22 +180,23 @@ export default {
     afterRead(file) {
       var formdata = new FormData();
       formdata.append("file", file.file);
-      var _this = this;
-      var settings = {
-        url: "http://localhost:8081/cefu",
-        method: "POST",
-        tixmeout: 0,
-        data: formdata
-      };
-      Vue.axios(settings)
-        .then(function(response) {
-          console.log(response);
-          _this.$store.dispatch("setRes", response.data);
-          _this.$router.push({ path: "/now2" });
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
+      // var _this = this;
+      // var settings = {
+      //   url: "http://localhost:8081/cefu",
+      //   method: "POST",
+      //   tixmeout: 0,
+      //   data: formdata
+      // };
+      // Vue.axios(settings)
+      //   .then(function(response) {
+      //     console.log(response);
+      //     _this.$store.dispatch("setRes", response.data);
+      //     _this.$router.push({ path: "/now2" });
+      //   })
+      //   .catch(function(error) {
+      //     console.log(error);
+      //   });
+      this.$router.push({path: "/now2"})
     }
   }
 };

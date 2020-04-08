@@ -13,7 +13,7 @@
         :authorImage="first.authorImage"
       />
       <article2
-        v-for="(item, index) in articles[1]"
+        v-for="(item, index) in articles[0]"
         :key="index"
         :isFirst="false"
         :id="item.articleId"
